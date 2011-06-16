@@ -1,0 +1,18 @@
+PATH
+  remote: .
+  specs:
+    generate_data_uri (0.0.1)
+      mime-types (~> 1.1)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    mime-types (1.16)
+    rake (0.9.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  generate_data_uri!
+  rake
