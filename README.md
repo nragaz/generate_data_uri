@@ -18,14 +18,16 @@ Requires Ruby 1.9.2.
 Usage (Rails)
 -------------
 
-  class User < ActiveRecord::Base
-    has_attached_file :avatar
-    
-    def to_uri(style=:original)
-      generate_data_uri avatar.path(style)
+    class User < ActiveRecord::Base
+      include GenerateDataUri
+      
+      has_attached_file :avatar
+      
+      def to_uri(style=:original)
+        generate_data_uri avatar.path(style)
+      end
     end
-  end
-  
-  # in view:
-  
-  tag :img, src: User.find(1).to_uri, alt: 'My Avatar'
+    
+    # in view:
+    
+    tag :img, src: User.find(1).to_uri, alt: 'My Avatar'
