@@ -14,7 +14,7 @@ module GenerateDataUri
   
     @_uri_cache ||= {}
     data = Base64.encode64(File.open(path, 'rb') {|f| f.read }).gsub(/\n/, '')
-    content_type = MIME::Types.type_for(path)
+    content_type = MIME::Types.type_for(path).first
     
     @_uri_cache[path] = "data:#{content_type};charset=utf-8;base64,#{data}"
   end

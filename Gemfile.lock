@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    generate_data_uri (0.0.1)
+    generate_data_uri (0.0.2)
       mime-types (~> 1.1)
 
 GEM
